@@ -1,6 +1,6 @@
 
 import { Button } from './ui/button';import { useState, useEffect } from 'react'
-import { Menu, X, Home, Info, Mail, Settings } from 'lucide-react'
+import { Menu, X} from 'lucide-react'
 
 const nevLinks = ["Dashboard", "Bonds", "Account"];
 function Nevbar() {
