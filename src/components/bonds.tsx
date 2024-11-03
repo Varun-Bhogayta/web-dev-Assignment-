@@ -30,7 +30,7 @@ function Bonds() {
     return (
         <div className="m-5">
             <h1 className='font-extrabold text-3xl flex justify-center m-7'>All Bonds</h1>
-            <div id="bond_list" className="grid xl:grid-cols-3 gap-3">
+            <div id="bond_list" className="grid lg:grid-cols-3 grid-cols-1 gap-3">
 
                 {bonds_data.map((item, index) => (
                     <Card className="w-full my-3 rounded-xl">
@@ -40,7 +40,7 @@ function Bonds() {
                             {/* <CardDescription>Card Description</CardDescription> */}
                         </CardHeader>
                         <CardContent>
-                            <div id="bond_data" className="flex justify-between">
+                            <div id="bond_data" className="grid grid-cols-2 lg:grid-cols-3 justify-between">
                                 <div id="xirr">
                                     <div>XIRR</div>
                                     <div className="font-bold">{item.XIRR}%</div>
