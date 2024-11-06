@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# Earninn : Vite-React-TS project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a web application built using Vite, Tailwind CSS, and TypeScript. It includes a responsive navigation bar, portfolio overview, KYC completion, and bonds listing components.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Installation](#installation)
+- [Usage](#usage)
+- [Component Structure](#component-structure)
+- [State Management](#state-management)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/vite-tailwind-ts-project.git
+   cd vite-tailwind-ts-project
 
-- Configure the top-level `parserOptions` property like this:
+2. Install dependencies:
+   ```sh
+   npm install
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. Start the development server:
+    ```sh
+    npm run dev   
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+4. Open your browser and navigate to [http://localhost:3000.](http://localhost:5173.)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Usage
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+To build the project for production, run: 
+  
+    npm run build
+
+To preview the production build, run:
+
+    npm run serve
+
+## Component Structure
+The project has a simple component structure:
+
+```src/components/Nevbar.tsx:``` The main navigation bar component.
+
+```src/components/Portfolio_kyc.tsx:``` The portfolio overview and KYC completion component.
+
+```src/components/Bonds.tsx:``` The bonds listing component.
+
+```src/components/ui/button.tsx:``` A reusable button component.
+
+```src/components/ui/card.tsx:``` A reusable card component.
+
+```src/components/ui/badge.tsx:``` A reusable badge component.
+
+```src/components/mode-toggle.tsx:``` A component to toggle between light and dark modes.
+
+### Nevbar Component
+The ```Nevbar``` component includes a responsive navigation bar with links and a menu toggle button. It uses CSS variables defined in app.css for styling.
+
+### Portfolio_kyc Component
+The ```Portfolio_kyc``` component displays an overview of the user's portfolio and a section to complete KYC.
+
+### Bonds Component
+The ```Bonds``` component lists various bonds with details such as sell percentage, XIRR, maturity date, and minimum investment.
+
+## State Management
+The project uses React's built-in useState and useEffect hooks for state management.
+
+### Nevbar Component
+```isOpen:``` A boolean state to track whether the navigation menu is open or closed.
+
+```isMobile:``` A boolean state to track whether the screen size is mobile or desktop.
+The useEffect hook is used to add an event listener for window resize events to update the isMobile state accordingly.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
