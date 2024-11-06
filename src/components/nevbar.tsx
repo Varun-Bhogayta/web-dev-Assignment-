@@ -1,6 +1,7 @@
 
 import { Button } from './ui/button';import { useState, useEffect } from 'react'
 import { Menu, X} from 'lucide-react'
+import { ModeToggle } from './mode-toggle';
 
 const nevLinks = ["Dashboard", "Bonds", "Account"];
 function Nevbar() {
@@ -28,7 +29,7 @@ function Nevbar() {
   }
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between bg-background text-primary ">
       <div className="left-sec flex">
 
       {isMobile ? (
@@ -41,13 +42,13 @@ function Nevbar() {
         {isMobile ? (
           <></>
         ) : (<div className="nevlinks flex m-3 ">
-          {nevLinks.map((link: string) => (<a href="#" key={link} className="flex items-center gap-2 p-2 hover:text-gray-700 underline rounded">{link}</a>))}
+          {nevLinks.map((link: string) => (<a href="#" key={link} className="flex items-center gap-2 p-2 hover:text-accent underline rounded">{link}</a>))}
         </div>
 
         )}
 
         <div
-          className={`fixed top-0 right-0 h-full w-64 bg-slate-200 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          className={`fixed z-10 top-0 right-0 h-full w-64 bg-popover-foreground text-primary-foreground transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
             } md:hidden`}
         >
           <div className="flex justify-end p-4">
@@ -57,7 +58,7 @@ function Nevbar() {
           </div>
           <div className="nevlinks">
           
-            {nevLinks.map((link: string) => (<a href="#" key={link} className="flex items-center gap-2 p-2 hover:text-gray-700 rounded">{link}</a>))}
+            {nevLinks.map((link: string) => (<a href="#" onClick={toggleMenu} key={link} className="flex items-center gap-2 p-2 rounded">{link}</a>))}
           
         </div>
         </div>
@@ -75,6 +76,7 @@ function Nevbar() {
 
       </div>
       <div className="right-sec flex-col justify-end">
+        <ModeToggle/>
         <Button variant="link" className='m-5' >Logout {'>'}</Button>
       </div>
     </div>

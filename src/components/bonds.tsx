@@ -28,14 +28,15 @@ const bonds_data = [
 ]
 function Bonds() {
     return (
+        <div className="bonds text-primary">
         <div className="m-5">
             <h1 className='font-extrabold text-3xl flex justify-center m-7'>All Bonds</h1>
             <div id="bond_list" className="grid lg:grid-cols-3 grid-cols-1 gap-3">
 
                 {bonds_data.map((item, index) => (
-                    <Card className="w-full my-3 rounded-xl">
+                    <Card className="w-full my-3 rounded-xl hover:scale-105 duration-150 ease-linear">
                         <CardHeader className="">
-                            <CardTitle className="col-span-3">{`${++index}. ${item.bond_name}`} <Badge variant={"outline"} className="bg-slate-100 py-1 m-1 flex-col justify-center">{item.sell_percent}% sold</Badge></CardTitle>
+                            <CardTitle className="col-span-3">{`${++index}. ${item.bond_name}`} <Badge variant={"outline"} className=" py-1 m-1 flex-col justify-center">{item.sell_percent}% sold</Badge></CardTitle>
                             
                             {/* <CardDescription>Card Description</CardDescription> */}
                         </CardHeader>
@@ -64,10 +65,11 @@ function Bonds() {
 
             </div>
             <div className="flex justify-center">
-                    <Button variant={"outline"} className="m-3 py-5 px-16 flex justify-center border-zinc-300 rounded hover:bg-slate-100 ">View all</Button>
+                    <Button variant={"outline"} className="m-3 py-5 px-16 flex justify-center">View all</Button>
             </div>
 
 
+        </div>
         </div>
     )
 }

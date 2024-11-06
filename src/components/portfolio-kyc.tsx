@@ -13,7 +13,7 @@ const portfolio_parameters = [  [ "Total Bonds" , 0 ],
   
 function Portfolio_kyc() {
   return (
-    <div className='grid lg:grid-cols-3 grid-cols-1 gap-5 p-5' >
+    <div className='grid lg:grid-cols-3 grid-cols-1 gap-5 p-5 bg-background text-primary' >
         <div id="portfolio_overview" className='lg:col-span-2'>
               <Card className='h-full w-full rounded-xl'>
                   <CardHeader>
@@ -43,7 +43,7 @@ function Portfolio_kyc() {
                   </CardHeader>
                   <CardContent>
                       <p>To invest in Bonds, complete your KYC and open a lifetime-free demat A/c on Earninn.</p>
-                      <Button className='bg-black text-white font-medium w-full hover:text-black hover:bg-slate-100 my-4 rounded'>Begin KYC</Button>
+                      <Button className='font-medium w-full my-4 rounded'>Begin KYC</Button>
                   </CardContent>
                   {/* <CardFooter>
                       <p>Card Footer</p>
