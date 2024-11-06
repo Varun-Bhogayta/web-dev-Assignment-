@@ -42,7 +42,7 @@ function Nevbar() {
         {isMobile ? (
           <></>
         ) : (<div className="nevlinks flex m-3 ">
-          {nevLinks.map((link: string) => (<a href="#" key={link} className="flex items-center gap-2 p-2 hover:text-accent underline rounded">{link}</a>))}
+          {nevLinks.map((link: string) => (<a href="#" key={link} className="flex items-center gap-2 p-2 hover:text-gray-500 underline rounded">{link}</a>))}
         </div>
 
         )}
@@ -58,7 +58,7 @@ function Nevbar() {
           </div>
           <div className="nevlinks">
           
-            {nevLinks.map((link: string) => (<a href="#" onClick={toggleMenu} key={link} className="flex items-center gap-2 p-2 rounded">{link}</a>))}
+            {nevLinks.map((link: string) => (<a href="#" onClick={toggleMenu} key={link} className="flex items-center gap-2 p-2  hover:text-gray-500 rounded">{link}</a>))}
           
         </div>
         </div>
