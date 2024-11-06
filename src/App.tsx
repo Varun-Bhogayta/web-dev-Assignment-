@@ -10,11 +10,9 @@ function App() {
   document.body.classList.add('bg-background');
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-      <div className="m-0">
         <Nevbar />
         <Portfolio_kyc />
         <Bonds />
-      </div>
     </ThemeProvider>
   )
 }
